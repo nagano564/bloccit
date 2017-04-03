@@ -29,3 +29,5 @@ end
  gem 'turbolinks'
  # bootstrap is a css framework. Provides layouts,forms etc
  gem 'bootstrap-sass'
+ 
+ gem 'pry-rails', :group => :development
