@@ -30,3 +30,5 @@ end
  gem 'turbolinks'
  # bootstrap is a css framework. Provides layouts,forms etc
  gem 'bootstrap-sass'
+ # Used for encrypting User passwords
+ gem 'bcrypt'
