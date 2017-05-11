@@ -1,0 +1,21 @@
+<h1>New Questions</h1>
+
+<div class="col-md-8">
+  <%= form_for @question do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Enter question" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter question body" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :resolved, class: 'checkbox' do %>
+        <%= f.check_box :resolved %> Resolved
+      <% end %>
+    </div>
+    <%= f.submit "Save", class: 'btn btn-success' %>
+  <% end %>
+</div>
+</div>

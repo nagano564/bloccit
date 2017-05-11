@@ -59,9 +59,18 @@ member = User.create!(
   email:    'member@example.com',
   password: 'helloworld'
 )
+
+20.times do
+  Question.create!(
+    title: RandomData.random_sentence,
+    body: RandomData.random_paragraph,
+    resolved: false
+  )
+end
  puts "Seed finished"
  puts "#{User.count} users created"
  puts "#{Topic.count} topics created"
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
  puts "#{Vote.count} votes created"
+ puts "#{Question.count}"
