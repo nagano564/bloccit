@@ -1,4 +1,12 @@
 require 'random_data'
+
+Question.destroy_all
+Vote.destroy_all
+Comment.destroy_all
+Post.destroy_all
+Topic.destroy_all
+User.destroy_all
+
 5.times do
   User.create!(
 
@@ -73,4 +81,4 @@ end
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
  puts "#{Vote.count} votes created"
- puts "#{Question.count}"
+ puts "#{Question.count} questions created"
