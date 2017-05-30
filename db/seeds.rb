@@ -9,7 +9,16 @@ require 'random_data'
 end
 users = User.all
 
-# Create Topics
+10.times do
+  sponsored_post = SponsoredPost.create!(
+    title:  RandomData.random_sentence,
+    body:   RandomData.random_paragraph
+
+  )
+end
+sponsored_post = SponsoredPost.all
+
+
 15.times do
   Topic.create!(
     name:         RandomData.random_sentence,
@@ -17,7 +26,8 @@ users = User.all
   )
 end
 topics = Topic.all
- # Create Posts
+
+
  50.times do
 
    post = Post.create!(
@@ -33,7 +43,6 @@ topics = Topic.all
  posts = Post.all
 
  # Create Comments
- # #3
  100.times do
    Comment.create!(
      user: users.sample,
@@ -47,16 +56,16 @@ topics = Topic.all
 
  # Create an admin user
 admin = User.create!(
-  name:     'Admin User',
-  email:    'admin@example.com',
+  name:     'Admin User2',
+  email:    'admin2@example.com',
   password: 'helloworld',
   role:     'admin'
 )
 
 # Create a member
 member = User.create!(
-  name:     'Member User',
-  email:    'member@example.com',
+  name:     'Member User2',
+  email:    'member2@example.com',
   password: 'helloworld'
 )
  puts "Seed finished"
@@ -65,3 +74,4 @@ member = User.create!(
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
  puts "#{Vote.count} votes created"
+ puts "#{Sponsored_post.count} sponsored post created"
