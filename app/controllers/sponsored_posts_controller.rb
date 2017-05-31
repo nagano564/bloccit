@@ -9,6 +9,7 @@ class SponsoredPostsController < ApplicationController
   end
 
   def edit
+    @topic = Topic.find(params[:topic_id])
     @sponsored_post = SponsoredPost.find(params[:id])
   end
 end
